@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results Dashboard - Comprehensive Testing Overview</title>
+    <meta name="description" content="Modern test results dashboard displaying comprehensive test execution data with nested module, file, and testcase insights.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Test Results Dashboard</h1>
+            <p>Comprehensive test execution overview and detailed results</p>
+        </header>
+
+        <div class="overall-section">
+            <div class="chart-container">
+                <canvas id="overallChart"></canvas>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card passed">
+                    <div class="stat-value" id="totalPassed">0</div>
+                    <div class="stat-label">Passed</div>
+                </div>
+                <div class="stat-card failed">
+                    <div class="stat-value" id="totalFailed">0</div>
+                    <div class="stat-label">Failed</div>
+                </div>
+                <div class="stat-card skipped">
+                    <div class="stat-value" id="totalSkipped">0</div>
+                    <div class="stat-label">Skipped</div>
+                </div>
+                <div class="stat-card not-executed">
+                    <div class="stat-value" id="totalNotExecuted">0</div>
+                    <div class="stat-label">Not Executed</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modules-section">
+            <h2>Modules <span id="moduleCount">(0)</span></h2>
+            <div id="modulesList"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
